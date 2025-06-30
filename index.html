@@ -57,6 +57,13 @@
       margin-left: 20px;
       line-height: 1.5em;
     }
+    .screenshots img {
+      width: 100%;
+      max-width: 600px;
+      margin: 10px auto;
+      display: block;
+      border-radius: 8px;
+    }
   </style>
 </head>
 <body>
@@ -66,8 +73,8 @@
     <nav>
       <a href="#dashboard">Dashboard</a>
       <a href="#about">About</a>
-      <a href="#resume">Resume</a>
       <a href="#project">Capstone</a>
+      <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -91,12 +98,6 @@
     </ul>
   </section>
 
-  <!-- Resume -->
-  <section class="section" id="resume">
-    <h2>Resume</h2>
-    <a class="btn" href="ChienPhan_Resume.pdf" target="_blank">Download Resume (PDF)</a>
-  </section>
-
   <!-- Capstone summary (Option 2) -->
   <section class="section" id="project">
     <h2>Capstone Project — EV Adoption</h2>
@@ -107,8 +108,17 @@
       <li>Segmented regions by income to recommend targeted charger incentives.</li>
     </ul>
     <a class="btn" href="EV Capstone Project.html" target="_blank">Read Full Interactive Report</a>
-    <!-- Optional PDF link -->
-    <!-- <a class="btn" href="EV_Capstone.pdf" target="_blank">Download PDF</a> -->
+
+    <div class="screenshots">
+      <img src="screenshots/ev_model_summary.png" alt="Model Summary Screenshot">
+      <img src="screenshots/ev_zip_analysis.png" alt="ZIP Code Analysis Screenshot">
+    </div>
+  </section>
+
+  <!-- Resume -->
+  <section class="section" id="resume">
+    <h2>Resume</h2>
+    <a class="btn" href="ChienPhan_Resume.pdf" target="_blank">Download Resume (PDF)</a>
   </section>
 
   <!-- Contact -->
