@@ -34,10 +34,12 @@
     header h1 {
       font-size: 2.5rem;
       margin: 0;
+      font-weight: 700;
     }
     header p {
       margin: 8px 0 16px;
       font-size: 1rem;
+      font-weight: 500;
     }
     nav a {
       margin: 0 12px;
@@ -46,12 +48,9 @@
       color: var(--accent);
       font-size: 0.95rem;
     }
-    nav a i {
-      margin-right: 5px;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
+    nav a i { margin-right: 5px; }
+    nav a:hover { text-decoration: underline; }
+
     section {
       padding: 60px 20px;
       max-width: 1000px;
@@ -64,10 +63,8 @@
       padding-bottom: 5px;
       margin-bottom: 20px;
     }
-    h3 {
-      color: var(--accent);
-      font-size: 1.4rem;
-    }
+    h3 { color: var(--accent); font-size: 1.4rem; }
+
     .project {
       background-color: var(--white);
       padding: 30px;
@@ -76,9 +73,7 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       transition: transform 0.2s ease;
     }
-    .project:hover {
-      transform: translateY(-6px);
-    }
+    .project:hover { transform: translateY(-6px); }
     .project img {
       max-width: 100%;
       margin: 15px 0;
@@ -94,23 +89,12 @@
       font-weight: 600;
       transition: transform 0.3s, box-shadow 0.3s;
     }
-    .btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
-    }
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      margin-top: 15px;
-      border-radius: 8px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    a {
-      color: var(--accent);
-    }
+    .btn:hover { transform: scale(1.05); box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3); }
+    ul { padding-left: 20px; }
+    a { color: var(--accent); }
+    /* ensure tableau placeholder is responsive */
+    .tableauPlaceholder { width: 100%; }
+    .tableauPlaceholder object { width: 100%; height: 600px; }
   </style>
 </head>
 <body>
@@ -132,22 +116,45 @@
 
   <section id="projects" data-aos="fade-up">
     <h2>Featured Projects</h2>
+
+    <!-- Netflix Project -->
     <div class="project">
       <h3>Netflix Global Dashboard</h3>
       <p>Interactive Tableau dashboard showing Netflix content distribution by country, rating, and genre.</p>
-      <iframe src="https://public.tableau.com/views/7PFGYW8SF/1" allowfullscreen></iframe>
+      <!-- Proper Tableau Embed -->
+      <div class='tableauPlaceholder' id='viz1688473793513' style='position: relative'>
+        <noscript>
+          <a href='#'><img alt='Netflix ' src='https://public.tableau.com/static/images/7P/7PFGYW8SF/1.png' style='border: none' /></a>
+        </noscript>
+        <object class='tableauViz' style='display:none;'>
+          <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+          <param name='embed_code_version' value='3' />
+          <param name='path' value='shared%2F7PFGYW8SF' />
+          <param name='toolbar' value='yes' />
+          <param name='static_image' value='https://public.tableau.com/static/images/7P/7PFGYW8SF/1.png' />
+          <param name='animate_transition' value='yes' />
+          <param name='display_static_image' value='yes' />
+          <param name='display_spinner' value='yes' />
+          <param name='display_overlay' value='yes' />
+          <param name='display_count' value='yes' />
+          <param name='language' value='en-US' />
+          <param name='filter' value='publish=yes' />
+        </object>
+      </div>
       <p><strong>Insight:</strong> Most Netflix content is concentrated in regions with higher income quartiles. Understanding regional preferences can guide content localization and marketing strategy.</p>
     </div>
+
+    <!-- EV Capstone -->
     <div class="project">
       <h3>Capstone Project – EV Market Adoption Analysis</h3>
       <p>A deep-dive Tableau story exploring electric vehicle adoption trends across ZIP codes. Includes demographic overlays and adoption clustering analysis.</p>
       <ul>
-        <li><strong>Map 1:</strong> Highlights coastal and metro regions with dense EV adoption.</li>
-        <img src="images/ev-map1.png" alt="EV Adoption Map 1">
-        <li><strong>Map 2:</strong> Shows adoption correlated with high-income and environmentally progressive ZIPs.</li>
-        <img src="images/ev-map2.png" alt="EV Adoption Map 2">
-        <li><strong>Map 3:</strong> Reveals suburban clusters with unexpected growth, showing secondary market potential.</li>
-        <img src="images/ev-map3.png" alt="EV Adoption Map 3">
+        <li><strong>Map 1:</strong> Highlights coastal and metro regions with dense EV adoption.<br>
+          <img src="images/ev-map1.png" alt="EV Adoption Map 1"></li>
+        <li><strong>Map 2:</strong> Shows adoption correlated with high-income and environmentally progressive ZIPs.<br>
+          <img src="images/ev-map2.png" alt="EV Adoption Map 2"></li>
+        <li><strong>Map 3:</strong> Reveals suburban clusters with unexpected growth, showing secondary market potential.<br>
+          <img src="images/ev-map3.png" alt="EV Adoption Map 3"></li>
       </ul>
       <a class="btn" href="https://public.tableau.com/app/profile/chienp/viz/EVAdoptionCapstone/Story" target="_blank"><i class="fas fa-external-link-alt"></i> View Full Interactive Report</a>
     </div>
@@ -165,5 +172,6 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
+  <!-- Tableau JS injected above for embed -->
 </body>
 </html>
