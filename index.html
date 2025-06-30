@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -98,20 +98,26 @@
     <iframe src="https://public.tableau.com/views/NetflixDashboard_17512679575670/Netflix?:embed=y&:display_count=yes&:showVizHome=no"></iframe>
   </section>
 
-  <!-- Capstone summary (Option 2) -->
+  <!-- Capstone summary with images and insight -->
   <section class="section" id="project">
     <h2>Capstone Project — EV Adoption</h2>
-    <p>Our master’s capstone examined how charging‑station availability drives electric‑vehicle (EV) ownership across California ZIP codes.</p>
+    <p>Our master’s capstone examined how charging‑station availability drives electric‑vehicle (EV) ownership across California ZIP codes. We analyzed how socioeconomic and infrastructure factors affect EV uptake using data science and GIS tools.</p>
     <ul>
       <li>Built regression, decision‑tree, and random‑forest models to predict EV penetration.</li>
       <li>Identified the charger‑per‑capita threshold where marginal adoption gains flatten.</li>
       <li>Segmented regions by income to recommend targeted charger incentives.</li>
     </ul>
-    <a class="btn" href="EV Capstone Project.html" target="_blank">Read Full Interactive Report</a>
     <div class="screenshots">
-      <img src="screenshots/ev_model_summary.png" alt="Model Summary Screenshot">
-      <img src="screenshots/ev_zip_analysis.png" alt="ZIP Code Analysis Screenshot">
+      <img src="map1.png" alt="EV Ownership by Income Quartile">
+      <p><em>Finding:</em> Higher EV ownership is clustered in Q4 income areas. <strong>Insight:</strong> Incentives should target lower-income quartiles to promote equitable EV adoption. This map highlights the correlation between affluence and early EV penetration.</p>
+
+      <img src="map2.png" alt="K-Means Clustered ZIP Codes">
+      <p><em>Finding:</em> K-means clustering revealed clear geographic segments. <strong>Insight:</strong> Region-specific policies can be crafted to address localized EV adoption barriers. Distinct regional patterns emerged, suggesting demographic-based infrastructure needs.</p>
+
+      <img src="map3.png" alt="High Adoption ZIPs">
+      <p><em>Finding:</em> A few metro ZIP codes dominate EV registration. <strong>Insight:</strong> Saturated areas suggest infrastructure growth should focus on underserved regions. These hot spots show where current investments are concentrated and where expansion is needed.</p>
     </div>
+    <a class="btn" href="EV Capstone Project.html" target="_blank">Read Full Interactive Report</a>
   </section>
 
   <!-- Resume -->
