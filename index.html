@@ -1,62 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Netflix Dashboard by Chien Phan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chien Phan | Data Portfolio</title>
   <style>
     body {
-      background-color: #111;
-      color: white;
+      margin: 0;
       font-family: Arial, sans-serif;
-      text-align: center;
+      background-color: #111;
+      color: #fff;
+    }
+    header {
+      background-color: #1a1a1a;
       padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
     iframe {
-      margin-top: 20px;
+      width: 100%;
+      height: 1000px;
       border: none;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 15px;
+      background-color: crimson;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .btn:hover {
+      background-color: darkred;
+    }
+    footer {
+      text-align: center;
+      margin: 40px 0;
+      font-size: 14px;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
-  <h1>Netflix Global Dashboard</h1>
-  <p>Explore trends in Netflix movies and TV shows by country, genre, and rating.</p>
+  <header>
+    <h1>Chien Phan</h1>
+    <p>Business Analytics | Data Visualization | Process Optimization</p>
+    <nav>
+      <a href="#dashboard">Dashboard</a>
+      <a href="#about">About</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <!-- ===== Tableau embed starts here ===== -->
-<div class="tableauPlaceholder" id="netflixViz" style="margin:0 auto; width:1200px;">
-  <noscript>
-    <a href="#">
-      <img src="https://public.tableau.com/static/images/Ne/NetflixDashboard_17512679575670/Netflix/1.png"
-           alt="Netflix dashboard thumbnail" style="border:none;">
-    </a>
-  </noscript>
+  <section class="section" id="dashboard">
+    <h2>Netflix Global Dashboard</h2>
+    <p>An interactive Tableau visualization showing Netflix content distribution by country, rating, and genre.</p>
+    <div class='tableauPlaceholder' id='vizContainer' style='width: 100%; height: 1000px;'>
+      <noscript>
+        <a href='https://public.tableau.com/views/NetflixDashboard_17512679575670/Netflix'>
+          <img alt='Netflix Dashboard'
+               src='https://public.tableau.com/static/images/Ne/NetflixDashboard_17512679575670/Netflix/1_rss.png'
+               style='border: none' />
+        </a>
+      </noscript>
+      <object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F'/>
+        <param name='embed_code_version' value='3'/>
+        <param name='site_root' value=''/>
+        <param name='name' value='NetflixDashboard_17512679575670/Netflix'/>
+        <param name='tabs' value='no'/>
+        <param name='toolbar' value='yes'/>
+      </object>
+    </div>
+    <script type='text/javascript'>
+      const container = document.getElementById('vizContainer');
+      const viz = container.getElementsByTagName('object')[0];
+      viz.style.width = '100%';
+      viz.style.height = '1000px';
+      const script = document.createElement('script');
+      script.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      container.appendChild(script);
+    </script>
+  </section>
 
-  <object class="tableauViz" style="display:none;">
-    <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
-    <param name="embed_code_version" value="3"/>
-    <param name="site_root" value=""/>
-    <param name="name" value="NetflixDashboard_17512679575670/Netflix"/>
-    <param name="tabs" value="no"/>
-    <param name="toolbar" value="yes"/>
-  </object>
-</div>
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>I'm Chien Phan, a data-driven Business Analytics graduate from UC Riverside with a strong background in sales, operations, and healthcare. I specialize in transforming data into actionable insights that improve business outcomes. With hands-on experience in tools like Python, R, SQL, Excel, Tableau, and Power BI, I love solving problems and helping organizations make smarter, faster decisions.</p>
+    <p>Previously, I’ve helped a beauty business cut inventory waste by 50%, optimized sales strategies at a fintech startup using Power BI, and worked on healthcare operations as an EMT. I combine technical skills with business acumen to drive performance and clarity in data.</p>
+  </section>
 
-<script type="text/javascript">
-  const placeholder = document.getElementById("netflixViz");
-  const vizObj      = placeholder.getElementsByTagName("object")[0];
+  <section class="section" id="resume">
+    <h2>Resume</h2>
+    <a class="btn" href="/mnt/data/MasterResume.docx.pdf" target="_blank">Download Resume</a>
+  </section>
 
-  /* size the viz (change if you want a different layout) */
-  vizObj.style.width  = "1200px";
-  vizObj.style.height = "1000px";
+  <section class="section" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:chienp054@gmail.com" style="color:#fff;">chienp054@gmail.com</a></p>
+    <p>Phone: 714-909-9660</p>
+    <p>Location: Stanton, CA</p>
+    <a class="btn" href="https://www.linkedin.com/in/cphan054/" target="_blank">Visit My LinkedIn</a>
+  </section>
 
-  /* load Tableau JS API */
-  const script = document.createElement("script");
-  script.src   = "https://public.tableau.com/javascripts/api/viz_v1.js";
-  vizObj.parentNode.insertBefore(script, vizObj);
-</script>
-<!-- ===== Tableau embed ends here ===== -->
-
-
-
-  <p style="margin-top: 30px;">Created by Chien Phan | Powered by Tableau</p>
+  <footer>
+    &copy; 2025 Chien Phan | Built with GitHub Pages and Tableau
+  </footer>
 </body>
 </html>
