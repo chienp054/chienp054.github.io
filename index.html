@@ -21,12 +21,40 @@
   <h1>Netflix Global Dashboard</h1>
   <p>Explore trends in Netflix movies and TV shows by country, genre, and rating.</p>
 
-  <iframe
-  src="https://public.tableau.com/views/NetflixDashboard_17512679575670/Netflix?:showVizHome=no&:embed=true"
-  width="1200"
-  height="1000"
-  style="border:0;">
-</iframe>
+  <!-- ===== Tableau embed starts here ===== -->
+<div class="tableauPlaceholder" id="netflixViz" style="margin:0 auto; width:1200px;">
+  <noscript>
+    <a href="#">
+      <img src="https://public.tableau.com/static/images/Ne/NetflixDashboard_17512679575670/Netflix/1.png"
+           alt="Netflix dashboard thumbnail" style="border:none;">
+    </a>
+  </noscript>
+
+  <object class="tableauViz" style="display:none;">
+    <param name="host_url" value="https%3A%2F%2Fpublic.tableau.com%2F"/>
+    <param name="embed_code_version" value="3"/>
+    <param name="site_root" value=""/>
+    <param name="name" value="NetflixDashboard_17512679575670/Netflix"/>
+    <param name="tabs" value="no"/>
+    <param name="toolbar" value="yes"/>
+  </object>
+</div>
+
+<script type="text/javascript">
+  const placeholder = document.getElementById("netflixViz");
+  const vizObj      = placeholder.getElementsByTagName("object")[0];
+
+  /* size the viz (change if you want a different layout) */
+  vizObj.style.width  = "1200px";
+  vizObj.style.height = "1000px";
+
+  /* load Tableau JS API */
+  const script = document.createElement("script");
+  script.src   = "https://public.tableau.com/javascripts/api/viz_v1.js";
+  vizObj.parentNode.insertBefore(script, vizObj);
+</script>
+<!-- ===== Tableau embed ends here ===== -->
+
 
 
   <p style="margin-top: 30px;">Created by Chien Phan | Powered by Tableau</p>
