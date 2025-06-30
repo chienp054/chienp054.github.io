@@ -30,10 +30,14 @@
       margin: 40px auto;
       padding: 0 20px;
     }
-    iframe {
-      width: 100%;
-      height: 1000px;
-      border: none;
+    .project-card {
+      background-color: #222;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+    }
+    .project-card h3 {
+      margin-top: 0;
     }
     .btn {
       display: inline-block;
@@ -47,6 +51,13 @@
     .btn:hover {
       background-color: darkred;
     }
+    .screenshots img {
+      width: 100%;
+      max-width: 600px;
+      margin: 10px auto;
+      display: block;
+      border-radius: 8px;
+    }
     footer {
       text-align: center;
       margin: 40px 0;
@@ -57,13 +68,6 @@
       margin-left: 20px;
       line-height: 1.5em;
     }
-    .screenshots img {
-      width: 100%;
-      max-width: 600px;
-      margin: 10px auto;
-      display: block;
-      border-radius: 8px;
-    }
   </style>
 </head>
 <body>
@@ -72,8 +76,7 @@
     <p>Business Analytics | Data Visualization | Process Optimization</p>
     <nav>
       <a href="#about">About</a>
-      <a href="#dashboard">Dashboard</a>
-      <a href="#project">Capstone</a>
+      <a href="#projects">Projects</a>
       <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -91,15 +94,32 @@
     </ul>
   </section>
 
-  <!-- Netflix Tableau dashboard -->
-  <section class="section" id="dashboard">
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <h2>Featured Projects</h2>
+
+    <div class="project-card">
+      <h3>Netflix Global Dashboard</h3>
+      <p>Interactive Tableau dashboard showing Netflix content distribution by country, rating, and genre.</p>
+      <a class="btn" href="#netflix">View Dashboard</a>
+    </div>
+
+    <div class="project-card">
+      <h3>Capstone Project — EV Adoption</h3>
+      <p>Analyzed how charging‑station availability drives EV ownership across California ZIP codes using regression models and geospatial clustering.</p>
+      <a class="btn" href="#evproject">View Summary</a>
+    </div>
+  </section>
+
+  <!-- Individual Project: Netflix -->
+  <section class="section" id="netflix">
     <h2>Netflix Global Dashboard</h2>
     <p>Interactive Tableau dashboard showing Netflix content distribution by country, rating, and genre.</p>
     <iframe src="https://public.tableau.com/views/NetflixDashboard_17512679575670/Netflix?:embed=y&:display_count=yes&:showVizHome=no"></iframe>
   </section>
 
-  <!-- Capstone summary with images and insight -->
-  <section class="section" id="project">
+  <!-- Individual Project: EV Capstone -->
+  <section class="section" id="evproject">
     <h2>Capstone Project — EV Adoption</h2>
     <p>Our master’s capstone examined how charging‑station availability drives electric‑vehicle (EV) ownership across California ZIP codes. We analyzed socioeconomic and infrastructure factors using regression, tree‑based, and deep‑learning models, plus GIS visualizations.</p>
     <ul>
@@ -140,4 +160,3 @@
   </footer>
 </body>
 </html>
- 
