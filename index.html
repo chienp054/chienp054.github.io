@@ -6,38 +6,48 @@
   <title>Chien Phan | Data Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #3b82f6;
+      --accent: #06b6d4;
+      --bg: #f9fafb;
+      --white: #ffffff;
+      --text: #1f2937;
+    }
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(180deg, #ffffff, #f1f3f6);
-      color: #333;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.6;
     }
     header {
-      background-color: #ffffff;
-      padding: 30px 20px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: var(--white);
+      padding: 40px 20px 30px;
       text-align: center;
-      border-bottom: 1px solid #e0e0e0;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
     header h1 {
-      font-size: 2.5rem;
-      color: #2c3e50;
+      font-size: 2.8rem;
       margin: 0;
     }
     header p {
+      margin: 10px 0 20px;
+      font-size: 1.1rem;
+    }
+    nav {
       margin-top: 10px;
-      color: #555;
     }
     nav a {
-      color: #2c3e50;
+      color: var(--white);
       margin: 0 15px;
       text-decoration: none;
       font-weight: 600;
+      font-size: 1rem;
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #007acc;
+      color: var(--accent);
     }
     section {
       padding: 60px 20px;
@@ -45,25 +55,26 @@
       margin: auto;
     }
     h2 {
-      font-size: 1.8rem;
-      color: #2c3e50;
-      border-bottom: 2px solid #007acc;
-      display: inline-block;
+      font-size: 2rem;
+      color: var(--primary);
       margin-bottom: 20px;
+      border-bottom: 2px solid var(--accent);
+      display: inline-block;
     }
     h3 {
-      color: #2c3e50;
+      color: var(--primary);
+      font-size: 1.4rem;
     }
     .project {
-      background-color: #ffffff;
+      background-color: var(--white);
       padding: 30px;
       margin-bottom: 40px;
       border-radius: 12px;
-      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       transition: transform 0.2s ease;
     }
     .project:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
     }
     .project img {
       max-width: 100%;
@@ -74,15 +85,15 @@
       display: inline-block;
       padding: 12px 24px;
       margin-top: 20px;
-      background-color: #007acc;
-      color: white;
+      background-color: var(--primary);
+      color: var(--white);
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 6px;
       font-weight: 600;
       transition: background-color 0.3s;
     }
     .btn:hover {
-      background-color: #005f99;
+      background-color: var(--secondary);
     }
     iframe {
       width: 100%;
@@ -92,7 +103,7 @@
       border-radius: 8px;
     }
     a {
-      color: #007acc;
+      color: var(--secondary);
     }
   </style>
 </head>
